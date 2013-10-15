@@ -1,0 +1,191 @@
+body { background: black; }
+
+#background, #stars {
+	position: absolute;
+	left: 0px; right: 0px;
+	margin: 0px -300px;
+}
+
+#background {
+	height: 100%; bottom: 0px;
+	background: url('../images/link-background.jpg') no-repeat 50% 100%;
+}
+
+#stars {
+	height: 400px; top: 0px;
+	background: url('../images/link-stars.png') 0% 0%, url('../images/link-stars.png') 100% 100%;
+	background-size: 100%, 150%
+}
+
+#star-cover {
+	position: absolute;
+	right: -300px; top: 204px;
+	width: 527px; height: 202px;
+	background: url('../images/link-star-cover.png');
+}
+
+header {
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	color: white;
+	display: block;
+	position: absolute;
+	text-align: center;
+	font-weight: bolder;
+	line-height: 38px;
+	width: 400px; margin: 0px auto;
+	left: 0px; right: 0px; top: 170px;
+	-webkit-transform: translateZ(50px) perspective(100px) rotateX(32deg); -khtml-transform: translateZ(50px) perspective(100px) rotateX(32deg); -moz-transform: translateZ(50px) perspective(100px) rotateX(32deg); -ms-transform: translateZ(50px) perspective(100px) rotateX(32deg); -o-transform: translateZ(50px) perspective(100px) rotateX(32deg); transform: translateZ(50px) perspective(100px) rotateX(32deg);
+}
+
+header > * {
+	display: block;
+}
+
+header > .name {
+	color: red;
+	font-size: 34px;
+}
+
+header > .description {
+	font-size: 36px;
+}
+
+header > .title {
+	font-size: 60px;
+	text-shadow: 1px 0px 0px white, -1px 0px 0px white,
+				 0px 1px 0px #138AB2, 0px 2px 0px #138AB2,
+				 0px 3px 0px #138AB2, 0px 4px 0px #138AB2,
+				 0px 5px 0px #138AB2, 0px 6px 0px #138AB2;
+}
+
+header > .title > .broken {
+	display: inline-block;
+	-webkit-transform: rotateX(32deg) rotateZ(40deg); -khtml-transform: rotateX(32deg) rotateZ(40deg); -moz-transform: rotateX(32deg) rotateZ(40deg); -ms-transform: rotateX(32deg) rotateZ(40deg); -o-transform: rotateX(32deg) rotateZ(40deg); transform: rotateX(32deg) rotateZ(40deg); 
+	-webkit-transform-origin: 0% 100%; -khtml-transform-origin: 0% 100%; -moz-transform-origin: 0% 100%; -ms-transform-origin: 0% 100%; -o-transform-origin: 0% 100%; transform-origin: 0% 100%; 
+}
+
+#get-in-touch, #friends {
+	background: url('../images/link-select-corner.jpg') no-repeat 0% 0%, url('../images/link-select-corner.jpg') no-repeat 0% 100%, url('../images/link-select-corner.jpg') no-repeat 100% 100%, url('../images/link-select-corner.jpg') no-repeat 100% 0%, black;
+	border: 3px solid black;
+	box-shadow: inset 0px 0px 0px 3px white, 0px 0px 0px 3px white;
+	display: block;
+	position: absolute;
+	padding: 25px 5px;
+	top: 75px; width: 300px;
+	margin: 0px -20px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#get-in-touch .scroll, #friends .scroll {
+	overflow: auto;
+	overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+	max-height: 450px;
+	margin-right: -30px;
+}
+
+#get-in-touch a, #friends a {
+	display: block;
+	text-indent: 35px;
+	white-space: nowrap;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+	background: url('../images/link-select.png') no-repeat 20px 50%;
+	color: white;
+	text-decoration: none;
+	line-height: 26px;
+}
+
+#get-in-touch a:hover, #friends a:hover {
+	background: url('../images/link-select.png') no-repeat 20px 50%, url('../images/link-select-hover.png') no-repeat 5px 50%;
+}
+
+#get-in-touch {
+	left: 105px;
+}
+
+/* TODO: Move content into the markup - it doesn't belong here (was trying something new) */
+#get-in-touch:before {
+	position: absolute;
+	text-align: center;
+	content: "FIND TOM HERE";
+	font-size: 22px;
+	margin: 0px 0px;
+	display: block;
+	color: white;
+	white-space: nowrap;
+	top: -40px; left: 0px; width: 100%;
+}
+
+#friends {
+	right: 105px;
+}
+
+#friends:before {
+	position: absolute;
+	text-align: center;
+	content: "OTHER HUMANS";
+	font-size: 22px;
+	margin: 0px 0px;
+	display: block;
+	color: white;
+	white-space: nowrap;
+	top: -40px; left: 0px; width: 100%;
+}
+
+#foes {
+	width: 200px; height: 30px;
+	position: absolute;
+	margin: 0px auto;
+	left: 0px; right: 0px;
+	bottom: 25px;
+	background: url('../images/link-select-corner.jpg') no-repeat 0% 0%, url('../images/link-select-corner.jpg') no-repeat 0% 100%, url('../images/link-select-corner.jpg') no-repeat 100% 100%, url('../images/link-select-corner.jpg') no-repeat 100% 0%, black;
+	border: 3px solid black;
+	box-shadow: inset 0px 0px 0px 3px white, 0px 0px 0px 3px white;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#foes:before {
+	content: "DON'T";
+	text-align: center;
+	display: block;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 28px;
+	color: white;
+	transition: .25s all ease;
+}
+
+#foes:hover:before {
+	color: red;
+	text-shadow: 0px 0px 5px yellow, 0px 0px 10px red, 0px 0px 15px white;
+}
+
+#gannon {
+	display: none;
+	position: absolute;
+	height: 100%;
+	left: 0px; right: 0px;
+	margin: 0px -300px;
+	background: url('../images/gannon.png') no-repeat 50% 100%, url('../images/flashy.gif');
+	-webkit-transform: translateZ(200px); -khtml-transform: translateZ(200px); -moz-transform: translateZ(200px); -ms-transform: translateZ(200px); -o-transform: translateZ(200px); transform: translateZ(200px); 
+}
+
+#gannon:before, #gannon:after {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 28px;
+	color: white;
+	display: block;
+	text-align: center;
+	padding: 50px 100px 0px;
+}
+
+#gannon:before { content: "GAME OVER"; }
+
+#gannon:after { content: "THE RETURN OF PAU GASOL"; }
+
+footer > nav > a {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+}

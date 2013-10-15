@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+html { 
+	background: #black; 
+	position: absolute;
+	width: 100%; height: 100%;
+	overflow: auto;
+}
+
+body {
+	position: relative;
+	width: 1028px; height: 800px;
+	left: 0px; right: 0px;
+	margin: 0px auto; padding: 0px;
+	background: black;
+}
+
+[data-roles~=collision] {
+	padding: 0px; margin: 0px;
+}
+
+#world {
+	background: url('../images/mouth-world.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; bottom: 0px;
+}
+
+#mario {
+	width: 63px; height: 140px;
+	left: 100px; top: 65px;
+	position: absolute;
+	background: url('../images/mario-tom.png') no-repeat 0px 0px;
+}
+
+#mario.left { 
+	background-position: 0px -140px;
+}
+
+#mario.walk { 
+	background-position: -200px 0px;
+}
+
+#mario.walk.left { 
+	background-position: -200px -140px;
+}
+
+#mario.step {
+	background-position: -100px 0px;
+}
+
+#mario.step.left {
+	background-position: -100px -140px;
+}
+
+#mario.shoot {
+	background-position: -400px 0px;
+}
+
+#mario.shoot.left {
+	background-position: -400px -140px;
+}
+
+#mario.jump {
+	background-position: -300px 0px;
+}
+
+#mario.jump.left {
+	background-position: -300px -140px;
+}
+
+#top-nav {
+	position: absolute;
+	left: 252px; top: 47px;
+	width: 454px;
+	text-align: center;
+}
+
+#right-nav {
+	position: absolute;
+	right: 45px; bottom: 100px;
+	width: 156px;
+}
+
+#top-nav > a, #right-nav > a {
+	display: inline-block;
+	width: 156px; height: 127px;
+	background: url('../images/mouth-link-left.png') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	line-height: 135px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+	text-shadow: 3px 0px 1px black, -3px 0px 1px black, 0px 3px 1px black, 0px -3px 1px black;
+	text-align: center;
+	margin: 5px;
+}
+
+#top-nav > a {
+	background-image: url('../images/mouth-link-down.png');
+	background-size: 100% 100%;
+	width: 127px; height: 156px;
+	line-height: 123px;
+}
+
+#top-wall {
+	position: absolute;
+	height: 60px;
+	top: 0px; left: 0px; right: 0px;
+}
+
+#left-wall {
+	position: absolute;
+	left: 0px; top: 0px; bottom: 0px;
+	width: 62px;
+}
+
+#right-wall {
+	position: absolute;
+	right: 0px; top: 0px; bottom: 0px;
+	width: 62px;
+}
+
+#bottom-wall {
+	position: absolute;
+	bottom: 0px; left: 0px; right: 0px;
+	height: 95px;
+}
+
+#center-block {
+	position: absolute;
+	bottom: 95px; left: 252px; 
+	width: 454px; height: 195px;
+}
+
+.fireball {
+	position: absolute;
+	border-radius: 100%;
+	width: 25px;
+	height: 25px;
+	box-shadow: 0px 0px 25px 0px orange, 0px 0px 25px 0px orange, 0px 0px 25px 0px orange, 0px 0px 25px 0px orange, inset 0px 0px 25px orange;
+}

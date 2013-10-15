@@ -1,0 +1,38 @@
+<!DOCTYPE html/>
+<html>
+	<head>
+		<link href="styles/mouth.css" type="text/css" rel="stylesheet" />		
+		<script src="scripts/jquery.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		<div id="world"></div>
+	
+		<div id="mario" data-roles="player"></div>
+
+		<div id="top-nav">
+			<a href="bonus.html" data-roles="collision enter-bottom">Bonus</a>
+			<a href="index.html" data-roles="collision enter-bottom">Home</a>
+		</div>
+		
+		<div id="right-nav">
+			<a href="contact.html" data-roles="collision enter-left">Contact</a>
+			<a href="links.html" data-roles="collision enter-left">Links</a>
+			<a href="bio.html" data-roles="collision enter-left">Bio</a>
+		</div>
+		
+		<div id="left-wall" data-roles="collision"></div>
+		<div id="right-wall" data-roles="collision"></div>
+		<div id="top-wall" data-roles="collision"></div>
+		<div id="bottom-wall" data-roles="collision"></div>
+		<div id="center-block" data-roles="collision"></div>
+		
+		<audio src="media/mouth-world.mp3" autoplay="autoplay" loop="loop"></audio>
+		<audio src="media/pipe.mp3" data-roles="link-audio"></audio>
+		<audio src="media/jump.mp3" data-roles="jump-audio"></audio>
+		<audio src="media/fireball.mp3" data-roles="fireball-audio"></audio>
+	</body>
+
+	
+	<script src="scripts/mouth.js" type="text/javascript"></script>
+</html>

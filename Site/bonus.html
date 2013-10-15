@@ -1,0 +1,36 @@
+<!DOCTYPE html/>
+<html>
+	<head>
+		<link href="styles/site.css" type="text/css" rel="stylesheet" />
+		<link href="styles/bonus.css" type="text/css" rel="stylesheet" />
+		
+		<script src="scripts/jquery.js" type="text/javascript"></script>
+		<script src="scripts/interaction-lib.js" type="text/javascript"></script>
+		<script src="scripts/site.js" type="text/javascript"></script>
+		<script src="scripts/everlax.js" type="text/javascript"></script>
+		<script src="scripts/bonus.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		
+		<div id="clip">
+			<div id="background"><div data-interaction="everlax" data-everlax-direction="0" data-everlax-duration="250ms"></div></div>
+			<div id="topground"><div data-interaction="everlax" data-everlax-direction="0" data-everlax-duration="250ms"></div></div>
+		</div>
+		
+		<div id="cityscape" data-interaction="everlax" data-everlax-direction="0" data-everlax-duration="5s"></div>
+		
+		<div id="foreground"><div id="glow" data-interaction="imagePreload" data-preload="images/bonus-tom-glow.png"></div></div>
+		
+		<div id="links">
+			<a href="sexy-pong.html">Sexy Pong</a>
+			<a href="cartoon-tom.html">Cartoon Tom</a>
+		</div>
+		
+		
+		<footer data-interaction="interaction" data-ajaxform-action="footer.html" data-ajaxform-target="footer" data-ajaxform-method="GET"></footer>
+		
+		<audio src="media/tron.mp3" autoplay="autoplay" loop="loop"></audio>
+		<div data-interaction="audioMute" class="mute"></div>
+	</body>
+</html>

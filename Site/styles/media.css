@@ -1,0 +1,214 @@
+html { 
+	background: url('../images/media-bg.jpg') no-repeat 50% 0% #00050A; 
+	background-size: auto 687px;
+	font-size: 20px;
+}
+
+footer > nav > a { font-family: 'Permanent Marker', cursive; }
+
+#content {
+	position: relative;
+	left: 0px; right: 0px;
+	top: 0px; bottom: 0px;
+	margin: 0px -500px;
+	padding: 0px;
+	overflow: hidden;
+	-webkit-transform: translateZ(1000px);
+	-khtml-transform: translateZ(1000px);
+	-moz-transform: translateZ(1000px);
+	-ms-transform: translateZ(1000px);
+	-o-transform: translateZ(1000px);
+	transform: translateZ(1000px);
+}
+
+.film-strip {
+	display: inline-block;
+	min-width: 51%;
+	margin: 0px 0px 25px 0px;
+	padding: 20px 0px;
+	background: url('../images/film-notch.png') repeat-x 0% 0%, url('../images/film-notch.png') repeat-x 0% 100%;
+	white-space: nowrap;
+	text-align: center;
+}
+
+@-webkit-keyframes item-hover { 0% { -webkit-transform: scale(1, 1); } 50% { -webkit-transform: scale(1.2, 1.2); } 100% { -webkit-transform: scale(1.1, 1.1); } }
+@-khtml-keyframes item-hover { 0% { -khtml-transform: scale(1, 1); } 50% { -khtml-transform: scale(1.2, 1.2); } 100% { -khtml-transform: scale(1.1, 1.1); } }
+@-moz-keyframes item-hover { 0% { -moz-transform: scale(1, 1); } 50% { -moz-transform: scale(1.2, 1.2); } 100% { -moz-transform: scale(1.1, 1.1); } }
+@-ms-keyframes item-hover { 0% { -ms-transform: scale(1, 1); } 50% { -ms-transform: scale(1.2, 1.2); } 100% { -ms-transform: scale(1.1, 1.1); } }
+@-o-keyframes item-hover { 0% { -o-transform: scale(1, 1); } 50% { -o-transform: scale(1.2, 1.2); } 100% { -o-transform: scale(1.1, 1.1); } }
+@keyframes item-hover { 0% { transform: scale(1, 1); } 50% { transform: scale(1.2, 1.2); } 100% { transform: scale(1.1, 1.1); } }
+.film-strip-item:hover {
+	-webkit-animation: item-hover 2s linear alternate infinite;
+	-khtml-animation: item-hover 2s linear alternate infinite;
+	-moz-animation: item-hover 2s linear alternate infinite;
+	-ms-animation: item-hover 2s linear alternate infinite;
+	-o-animation: item-hover 2s linear alternate infinite;
+	animation: item-hover 2s linear alternate infinite;
+	box-shadow: 0px 0px 30px 0px #0080FF, 0px 0px 30px 0px #0080FF;
+	z-index: 100;
+}
+
+.film-strip-item {
+	transition: .5s all ease;
+	position: relative;
+	display: inline-block;
+	width: 250px; height: 141px;
+	white-space: normal;
+	vertical-align: top;
+	margin: 0px -4px;
+	padding: 0px;
+	border-left: 10px solid black;
+	border-right: 10px solid black;
+	background: black;
+	overflow: hidden;
+}
+
+.film-strip-item * {
+	display: block;
+	width: 100%;
+}
+
+.film-strip-item > a > img {
+	border: none;
+	background: url('../images/media-bg.jpg') no-repeat 50% 0% / 100% auto black;
+}
+
+.film-strip-item > a > .title {
+	position: absolute;
+	bottom: 5px;
+	left: 0px; right: 0px;
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	text-decoration: none;
+	font-style: none;
+	color: white;
+	transition: .5s all ease;
+	text-shadow: 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black,
+				 2px -2px 0px black, -2px -2px 0px black, -2px 2px 0px black, -2px -2px 0px black,
+				 2px -2px 0px black, -2px -2px 0px black, -2px 2px 0px black, -2px -2px 0px black;
+}
+
+h1, h2, h3, h1 > a, h2 > a, h3 > a {
+	text-shadow: 4px 0px 0px black, -4px 0px 0px black, 0px 4px 0px black, 0px -4px 0px black,
+				 4px -4px 0px black, -4px -4px 0px black, -4px 4px 0px black, -4px -4px 0px black,
+				 4px -4px 0px black, -4px -4px 0px black, -4px 4px 0px black, -4px -4px 0px black,
+				 10px 0px 0px #3050D0, -10px 0px 0px #3050D0, 
+				 20px 0px 5px #2040B0, -20px 0px 5px #2040B0, 
+				 30px 0px 10px #103090, -30px 0px 10px #103090, 
+				 40px 0px 15px #002070, -40px 0px 15px #002070, 
+				 50px 0px 20px #001050, -50px 0px 20px #001050;
+}
+
+h1 > a:hover, h2 > a:hover, h3 > a:hover {
+	text-shadow: 4px 0px 0px black, -4px 0px 0px black, 0px 4px 0px black, 0px -4px 0px black,
+				 4px -4px 0px black, -4px -4px 0px black, -4px 4px 0px black, -4px -4px 0px black,
+				 4px -4px 0px black, -4px -4px 0px black, -4px 4px 0px black, -4px -4px 0px black,
+				 10px 0px 0px #3050D0, -10px 0px 0px #3050D0, 
+				 20px 0px 5px #2040B0, -20px 0px 5px #2040B0, 
+				 30px 0px 10px #103090, -30px 0px 10px #103090, 
+				 40px 0px 15px #002070, -40px 0px 15px #002070, 
+				 50px 0px 20px #001050, -50px 0px 20px #001050,
+				 0px 0px 25px white, 0px 0px 25px white, 0px 0px 25px white;
+}
+
+@-webkit-keyframes reel-left { 0% { -webkit-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(0deg); } 100% { -webkit-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(360deg); } }
+@-khtml-keyframes reel-left { 0% { -khtml-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(0deg); } 100% { -khtml-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(360deg); } }
+@-moz-keyframes reel-left { 0% { -moz-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(0deg); } 100% { -moz-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(360deg); } }
+@-ms-keyframes reel-left { 0% { -ms-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(0deg); } 100% { -ms-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(360deg); } }
+@-o-keyframes reel-left { 0% { -o-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(0deg); } 100% { -o-transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(360deg); } }
+@keyframes reel-left { 0% { transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(0deg); } 100% { transform: perspective(800px) rotateX(45deg) rotateY(16deg) rotateZ(360deg); } }
+
+#reel-left {
+	position: absolute;
+	left: 0px; top: -150px;
+	width: 700px; height: 700px;
+	margin: 0px 0px 0px -300px;
+}
+
+#reel-left:before, #reel-left:after {
+	content: "";
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; bottom: 0px;
+	-webkit-animation: reel-left 30s linear infinite;
+	-khtml-animation: reel-left 30s linear infinite;
+	-moz-animation: reel-left 30s linear infinite;
+	-ms-animation: reel-left 30s linear infinite;
+	-o-animation: reel-left 30s linear infinite;
+	animation: reel-left 30s linear infinite;
+}
+
+#reel-left:before {
+	background: url('../images/film-roll-shadow.png') no-repeat 50% 50%, url('../images/reel.png') no-repeat 50% 50%;
+	background-size: 65% 65%, 100% 100%;
+	margin: 70px 25px -70px -25px;
+}
+#reel-left:after {
+	background: url('../images/reel.png') no-repeat 50% 50%, url('../images/film-roll.png') no-repeat 50% 50%;
+	background-size: 100% 100%, 65% 65%;
+}
+
+
+@-webkit-keyframes reel-right { 0% { -webkit-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(0deg); } 100% { -webkit-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(360deg); } }
+@-khtml-keyframes reel-right { 0% { -khtml-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(0deg); } 100% { -khtml-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(360deg); } }
+@-moz-keyframes reel-right { 0% { -moz-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(0deg); } 100% { -moz-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(360deg); } }
+@-ms-keyframes reel-right { 0% { -ms-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(0deg); } 100% { -ms-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(360deg); } }
+@-o-keyframes reel-right { 0% { -o-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(0deg); } 100% { -o-transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(360deg); } }
+@keyframes reel-right { 0% { transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(0deg); } 100% { transform: perspective(800px) rotateX(45deg) rotateY(-16deg) rotateZ(360deg); } }
+
+#reel-right {
+	position: absolute;
+	right: 0px; top: -150px;
+	width: 700px; height: 700px;
+	margin: 0px -300px 0px 0px;
+}
+
+#reel-right:before, #reel-right:after {
+	content: "";
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; bottom: 0px;
+	-webkit-animation: reel-right 30s linear infinite;
+	-khtml-animation: reel-right 30s linear infinite;
+	-moz-animation: reel-right 30s linear infinite;
+	-ms-animation: reel-right 30s linear infinite;
+	-o-animation: reel-right 30s linear infinite;
+	animation: reel-right 30s linear infinite;
+}
+
+#reel-right:before {
+	background: url('../images/film-roll-shadow.png') no-repeat 50% 50%, url('../images/reel.png') no-repeat 50% 50%;
+	background-size: 65% 65%, 100% 100%;
+	margin: 70px -25px -70px 25px;
+}
+#reel-right:after {
+	background: url('../images/reel.png') no-repeat 50% 50%, url('../images/film-roll.png') no-repeat 50% 50%;
+	background-size: 100% 100%, 65% 65%;
+}
+
+.mute, footer {
+	-webkit-transform: translateZ(10000px); -khtml-transform: translateZ(10000px); -moz-transform: translateZ(10000px); -ms-transform: translateZ(10000px); -o-transform: translateZ(10000px); transform: translateZ(10000px);
+}
+
+.image-viewer {
+	position: absolute; display: block;
+	width: auto !important; height: auto !important;
+	left: -1000px; right: -1000px;
+	top: 0px; bottom: -100px;
+	background: #00050A; margin: auto;
+	padding: 50px 20px 80px 20px;
+	border-radius: 20px;
+}
+
+.image-viewer img {
+	position: absolute;
+	display: block;	margin: auto;
+	left: 0px; right: 0px;
+	top: 0px; bottom: 0px;
+	padding: 20px; background: white;
+	border-radius: 20px;
+}
+

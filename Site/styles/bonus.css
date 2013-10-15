@@ -1,0 +1,169 @@
+html { 
+	background: #000000; 
+}
+
+body {
+	background: #000000;
+	overflow-y: hidden;
+}
+
+#topground {
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; height: 100%; 
+	margin: 0px -300px;
+	-webkit-transform: perspective(200px) rotateX(-130deg) translateZ(-200px) scaleX(3); -khtml-transform: perspective(200px) rotateX(-130deg) translateZ(-200px) scaleX(3); -moz-transform: perspective(200px) rotateX(-130deg) translateZ(-200px) scaleX(3); -ms-transform: perspective(200px) rotateX(-130deg) translateZ(-200px) scaleX(3); -o-transform: perspective(200px) rotateX(-130deg) translateZ(-200px) scaleX(3); transform: perspective(200px) rotateX(-130deg) translateZ(-200px) scaleX(3);
+}
+
+#topground > div {
+	background: url('../images/tron-background.jpg');
+	background-size: 40px;
+	height: 100%;
+}
+
+#background {
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; height: 100%; 
+	margin: 0px -300px;
+	-webkit-transform: perspective(500px) rotateX(60deg) translateZ(100px) scale(2); -khtml-transform: perspective(500px) rotateX(60deg) translateZ(100px) scale(2); -moz-transform: perspective(500px) rotateX(60deg) translateZ(100px) scale(2); -ms-transform: perspective(500px) rotateX(60deg) translateZ(100px) scale(2); -o-transform: perspective(500px) rotateX(60deg) translateZ(100px) scale(2); transform: perspective(500px) rotateX(60deg) translateZ(100px) scale(2);
+}
+
+#background > div {
+	background: url('../images/tron-background.jpg');
+	background-size: 40px;
+	height: 100%;
+}
+
+#clip {
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; height: 100%; 
+	margin: 0px -300px;
+	overflow: hidden;
+}
+
+#cityscape {
+	position: absolute;
+	background: url('../images/tron-cityscape.png') repeat-x 0px 0px;
+	height: 300px;
+	left: 0px; right: 0px;
+	margin: 0px -300px;
+	top: -57px;
+}
+
+#foreground, #glow {
+	position: absolute;
+	left: 0px; right: 0px;
+	top: 0px; height: 72%;
+	background: url('../images/bonus-tom.png') no-repeat 50% 0%;
+	background-size: auto 100%;
+}
+
+@-webkit-keyframes glow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+@-khtml-keyframes glow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+@-moz-keyframes glow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+@-ms-keyframes glow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+@-o-keyframes glow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes glow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+
+#glow {
+	height: 100%;
+	-webkit-animation: glow linear infinite 10s;
+	-khtml-animation: glow linear infinite 10s;
+	-moz-animation: glow linear infinite 10s;
+	-ms-animation: glow linear infinite 10s;
+	-o-animation: glow linear infinite 10s;
+	animation: glow linear infinite 10s;
+}
+
+@-webkit-keyframes tron-bike { 0% { -webkit-transform: translateX(0px); -webkit-animation-timing-function: ease-out; } 25% { -webkit-transform: translateX(75px); -webkit-animation-timing-function: ease-out; } 50% { -webkit-transform: translateX(50px); -webkit-animation-timing-function: ease-out; } 75% { -webkit-transform: translateX(100px); -webkit-animation-timing-function: ease-out; } 100% { -webkit-transform: translateX(0px); -webkit-animation-timing-function: ease-out; } }
+@-khtml-keyframes tron-bike { 0% { -khtml-transform: translateX(0px); -khtml-animation-timing-function: ease-out; } 25% { -khtml-transform: translateX(75px); -khtml-animation-timing-function: ease-out; } 50% { -khtml-transform: translateX(50px); -khtml-animation-timing-function: ease-out; } 75% { -khtml-transform: translateX(100px); -khtml-animation-timing-function: ease-out; } 100% { -khtml-transform: translateX(0px); -khtml-animation-timing-function: ease-out; } }
+@-moz-keyframes tron-bike { 0% { -moz-transform: translateX(0px); -moz-animation-timing-function: ease-out; } 25% { -moz-transform: translateX(75px); -moz-animation-timing-function: ease-out; } 50% { -moz-transform: translateX(50px); -moz-animation-timing-function: ease-out; } 75% { -moz-transform: translateX(100px); -moz-animation-timing-function: ease-out; } 100% { -moz-transform: translateX(0px); -moz-animation-timing-function: ease-out; } }
+@-ms-keyframes tron-bike { 0% { -ms-transform: translateX(0px); -ms-animation-timing-function: ease-out; } 25% { -ms-transform: translateX(75px); -ms-animation-timing-function: ease-out; } 50% { -ms-transform: translateX(50px); -ms-animation-timing-function: ease-out; } 75% { -ms-transform: translateX(100px); -ms-animation-timing-function: ease-out; } 100% { -ms-transform: translateX(0px); -ms-animation-timing-function: ease-out; } }
+@-o-keyframes tron-bike { 0% { -o-transform: translateX(0px); -o-animation-timing-function: ease-out; } 25% { -o-transform: translateX(75px); -o-animation-timing-function: ease-out; } 50% { -o-transform: translateX(50px); -o-animation-timing-function: ease-out; } 75% { -o-transform: translateX(100px); -o-animation-timing-function: ease-out; } 100% { -o-transform: translateX(0px); -o-animation-timing-function: ease-out; } }
+@keyframes tron-bike { 0% { transform: translateX(0px); animation-timing-function: ease-out; } 25% { transform: translateX(75px); animation-timing-function: ease-out; } 50% { transform: translateX(50px); animation-timing-function: ease-out; } 75% { transform: translateX(100px); animation-timing-function: ease-out; } 100% { transform: translateX(0px); animation-timing-function: ease-out; } }
+
+#links {
+	position: absolute;
+	left: 0px; right: 0px;
+	bottom: 50px; height: 100%; 
+	margin: 0px -300px;
+	overflow: hidden;
+}
+
+#links > a {
+	display: block;
+	width: 1000px;
+	position: absolute;
+	font-size: 36px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bolder;
+	color: white;
+	text-decoration: none;
+	text-shadow: -2px 0px 1px #7AD5D5, 2px 0px 1px #7AD5D5, 0px -2px 1px #7AD5D5, 0px 2px 1px #7AD5D5, -4px -4px 5px black;
+	transition: .25s all ease;
+}
+
+#links > a:hover {
+	text-shadow: -2px 0px 1px #7AD5D5, 2px 0px 1px #7AD5D5, 0px -2px 1px #7AD5D5, 0px 2px 1px #7AD5D5, -4px -4px 5px black, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white;
+}
+
+/********** ROOM FOR MORE LINKS HERE
+#links > a:nth-child(5n+1) {
+	background-image: url('../images/tron-bike-yellow.png');
+	text-indent: 210px;
+	height: 60px;
+	padding-top: 40px;
+	bottom: 400px;
+	right: -550px;
+}
+
+#links > a:nth-child(5n+2) {
+	background-image: url('../images/tron-bike-teal.png');
+	text-indent: 235px;
+	height: 70px;
+	padding-top: 45px;
+	bottom: 315px;
+	right: -450px;
+}
+
+#links > a:nth-child(5n+3) {
+	background-image: url('../images/tron-bike-blue.png');
+	text-indent: 270px;
+	height: 75px;
+	padding-top: 55px;
+	bottom: 220px;
+	right: -350px;
+}
+*/
+
+#links > a:nth-child(5n+1) {
+	-webkit-animation: tron-bike 5s infinite; -khtml-animation: tron-bike 5s infinite; -moz-animation: tron-bike 5s infinite; -ms-animation: tron-bike 5s infinite; -o-animation: tron-bike 5s infinite; animation: tron-bike 5s infinite;
+	background-image: url('../images/tron-bike-yellow.png');
+	text-indent: 300px;
+	height: 80px;
+	padding-top: 65px;
+	bottom: 115px;
+	right: -150px;
+}
+
+#links > a:nth-child(5n+2) {
+	-webkit-animation: tron-bike 6s infinite; -khtml-animation: tron-bike 6s infinite; -moz-animation: tron-bike 6s infinite; -ms-animation: tron-bike 6s infinite; -o-animation: tron-bike 6s infinite; animation: tron-bike 6s infinite;
+	background-image: url('../images/tron-bike-teal.png');
+	text-indent: 330px;
+	height: 90px;
+	padding-top: 70px;
+	bottom: 0px;
+	right: -50px;
+}
+
+footer > nav > a {
+	font-family: 'Orbitron', sans-serif;
+}
+
+.mute, #foreground, #links, footer {
+	-webkit-transform: translateZ(10000px); -khtml-transform: translateZ(10000px); -moz-transform: translateZ(10000px); -ms-transform: translateZ(10000px); -o-transform: translateZ(10000px); transform: translateZ(10000px);
+}

@@ -1,0 +1,201 @@
+@import url(http://fonts.googleapis.com/css?family=Sniglet:800|Press+Start+2P|Squada+One|Orbitron|Permanent+Marker);
+
+body { 
+	background: black; 
+	font-family: 'Press Start 2P', cursive;
+}
+
+footer > nav > a {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+}
+
+#background {
+	position: absolute;
+	width: 100%; height: 100%;
+	left: 0px; right: 0px;
+	background: url('../images/arcade-bg.png') no-repeat 50% 0% black;
+	background-size: auto 100%;
+}
+
+#cabinet {
+	position: relative;
+	width: 100%; height: 100%;
+	background: url('../images/sexy-pong-cabinet.png') no-repeat 50% 0%;
+	background-size: auto 100%;
+}
+
+@-webkit-keyframes cloud-man { 0% { left: 25%; -webkit-transform: rotateY(0deg); }  49% { left: 65%; -webkit-transform: rotateY(0deg); }  50% { left: 65%; -webkit-transform: rotateY(180deg); } 99% { left: 25%; -webkit-transform: rotateY(180deg); }  100% { left: 25%; -webkit-transform: rotateY(0deg); } }
+@-khtml-keyframes cloud-man { 0% { left: 25%; -khtml-transform: rotateY(0deg); }  49% { left: 65%; -khtml-transform: rotateY(0deg); }  50% { left: 65%; -khtml-transform: rotateY(180deg); } 99% { left: 25%; -khtml-transform: rotateY(180deg); }  100% { left: 25%; -khtml-transform: rotateY(0deg); } }
+@-moz-keyframes cloud-man { 0% { left: 25%; -moz-transform: rotateY(0deg); }  49% { left: 65%; -moz-transform: rotateY(0deg); }  50% { left: 65%; -moz-transform: rotateY(180deg); } 99% { left: 25%; -moz-transform: rotateY(180deg); }  100% { left: 25%; -moz-transform: rotateY(0deg); } }
+@-ms-keyframes cloud-man { 0% { left: 25%; -ms-transform: rotateY(0deg); }  49% { left: 65%; -ms-transform: rotateY(0deg); }  50% { left: 65%; -ms-transform: rotateY(180deg); } 99% { left: 25%; -ms-transform: rotateY(180deg); }  100% { left: 25%; -ms-transform: rotateY(0deg); } }
+@-o-keyframes cloud-man { 0% { left: 25%; -o-transform: rotateY(0deg); }  49% { left: 65%; -o-transform: rotateY(0deg); }  50% { left: 65%; -o-transform: rotateY(180deg); } 99% { left: 25%; -o-transform: rotateY(180deg); }  100% { left: 25%; -o-transform: rotateY(0deg); } }
+@keyframes cloud-man { 0% { left: 25%; transform: rotateY(0deg); }  49% { left: 65%; transform: rotateY(0deg); }  50% { left: 65%; transform: rotateY(180deg); } 99% { left: 25%; transform: rotateY(180deg); }  100% { left: 25%; transform: rotateY(0deg); } }
+
+.cloud-man {
+	background: url('../images/cloud-man.png') no-repeat 50% 50%;
+	display: block;
+	width: 80px;
+	height: 140px;
+	position: absolute;
+	left: 25%; top: 50px; 
+	margin: auto;
+	-webkit-animation: cloud-man 20s ease infinite; -khtml-animation: cloud-man 20s ease infinite; -moz-animation: cloud-man 20s ease infinite; -ms-animation: cloud-man 20s ease infinite; -o-animation: cloud-man 20s ease infinite; animation: cloud-man 20s ease infinite;
+	-webkit-backface-visibility: visible; -khtml-backface-visibility: visible; -moz-backface-visibility: visible; -ms-backface-visibility: visible; -o-backface-visibility: visible; backface-visibility: visible;
+}
+
+#game-container {
+	background: yellow;
+}
+
+#load-screen {
+	font-size: 14px;
+	color: orange;
+	text-shadow: 2px 0px 0px green, -2px 0px 0px green, 0px 2px 0px green, 0px -2px 0px green;
+}
+
+#start-screen {
+	cursor: default;
+}
+
+#start-button {
+	position: absolute;
+	left: 0px; right: 0px;
+	width: 100%;
+	bottom: 10px;
+	font-size: 10px;
+	transition: .5s all ease;
+	color: orange;
+	cursor: pointer;
+	text-shadow: 0px 0px 5px green, 0px 0px 5px green, 0px 0px 5px green, 0px 0px 5px green;
+}
+
+#start-button:hover {
+	text-shadow: 0px 0px 15px green, 0px 0px 15px green, 0px 0px 15px green, 0px 0px 15px green;
+}
+
+@-webkit-keyframes logo { 0% { -webkit-transform: rotate(-20deg) scale(.5, .5);} 25% { -webkit-transform: rotate(-20deg) scale(1, 1);} 50% { -webkit-transform: rotate(-20deg) scale(.5, 1);} 75% { -webkit-transform: rotate(-20deg) scale(1, .5);} 100% { -webkit-transform: rotate(-20deg) scale(.5, .5);} }
+@-khtml-keyframes logo { 0% { -khtml-transform: rotate(-20deg) scale(.5, .5);} 25% { -khtml-transform: rotate(-20deg) scale(1, 1);} 50% { -khtml-transform: rotate(-20deg) scale(.5, 1);} 75% { -khtml-transform: rotate(-20deg) scale(1, .5);} 100% { -khtml-transform: rotate(-20deg) scale(.5, .5);} }
+@-moz-keyframes logo { 0% { -moz-transform: rotate(-20deg) scale(.5, .5);} 25% { -moz-transform: rotate(-20deg) scale(1, 1);} 50% { -moz-transform: rotate(-20deg) scale(.5, 1);} 75% { -moz-transform: rotate(-20deg) scale(1, .5);} 100% { -moz-transform: rotate(-20deg) scale(.5, .5);} }
+@-ms-keyframes logo { 0% { -ms-transform: rotate(-20deg) scale(.5, .5);} 25% { -ms-transform: rotate(-20deg) scale(1, 1);} 50% { -ms-transform: rotate(-20deg) scale(.5, 1);} 75% { -ms-transform: rotate(-20deg) scale(1, .5);} 100% { -ms-transform: rotate(-20deg) scale(.5, .5);} }
+@-o-keyframes logo { 0% { -o-transform: rotate(-20deg) scale(.5, .5);} 25% { -o-transform: rotate(-20deg) scale(1, 1);} 50% { -o-transform: rotate(-20deg) scale(.5, 1);} 75% { -o-transform: rotate(-20deg) scale(1, .5);} 100% { -o-transform: rotate(-20deg) scale(.5, .5);} }
+@keyframes logo { 0% { transform: rotate(-20deg) scale(.5, .5);} 25% { transform: rotate(-20deg) scale(1, 1);} 50% { transform: rotate(-20deg) scale(.5, 1);} 75% { transform: rotate(-20deg) scale(1, .5);} 100% { transform: rotate(-20deg) scale(.5, .5);} }
+
+#logo {
+	-webkit-animation: logo 1.25s ease-out infinite;
+	-webkit-transform-origin: 50% 20%;
+	-khtml-animation: logo 1.25s ease-out infinite;
+	-khtml-transform-origin: 50% 20%;
+	-moz-animation: logo 1.25s ease-out infinite;
+	-moz-transform-origin: 50% 20%;
+	-ms-animation: logo 1.25s ease-out infinite;
+	-ms-transform-origin: 50% 20%;
+	-o-animation: logo 1.25s ease-out infinite;
+	-o-transform-origin: 50% 20%;
+	animation: logo 1.25s ease-out infinite;
+	transform-origin: 50% 20%;
+	text-shadow: 0px 0px 15px green, 0px 0px 15px green, 0px 0px 15px green, 0px 0px 15px green;
+	color: orange;
+}
+
+#computer-ui, #player-ui {
+	font-size: 10px;
+}
+
+#round-screen h1 {
+	font-size: 140px;
+	color: orange;
+	text-shadow: 0px 0px 15px green, 0px 0px 15px green, 0px 0px 15px green, 0px 0px 15px green;
+}
+
+@-webkit-keyframes ball { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); } }
+@-khtml-keyframes ball { 0% { -khtml-transform: rotate(0deg); } 100% { -khtml-transform: rotate(360deg); } }
+@-moz-keyframes ball { 0% { -moz-transform: rotate(0deg); } 100% { -moz-transform: rotate(360deg); } }
+@-ms-keyframes ball { 0% { -ms-transform: rotate(0deg); } 100% { -ms-transform: rotate(360deg); } }
+@-o-keyframes ball { 0% { -o-transform: rotate(0deg); } 100% { -o-transform: rotate(360deg); } }
+@keyframes ball { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+#ball {
+	-webkit-animation: ball linear 2s infinite;
+	-khtml-animation: ball linear 2s infinite;
+	-moz-animation: ball linear 2s infinite;
+	-ms-animation: ball linear 2s infinite;
+	-o-animation: ball linear 2s infinite;
+	animation: ball linear 2s infinite;
+	background: url('../images/TomHead.png') no-repeat 0% 50% transparent;
+	background-size: 100% 100%;
+}
+
+#paddle-left, #paddle-right, #paddle-top, #paddle-bottom {
+	overflow: visible;
+	background: none;
+	border: 1px solid orange;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 0px green, 0px 0px 5px 0px green, 0px 0px 5px 0px green, 0px 0px 5px 0px green, 
+				inset 0px 0px 5px 0px green, inset 0px 0px 5px 0px green, inset 0px 0px 5px 0px green, inset 0px 0px 5px 0px green;
+}
+
+#paddle-left:before, #paddle-right:before, #paddle-top:before, #paddle-bottom:before {
+	position: absolute;
+	content: "VIAGRA";
+	display: block;
+	font-size: 8px;
+	color: orange;
+	text-shadow: 0px 0px 2px green, 0px 0px 2px green, 0px 0px 2px green, 0px 0px 2px green;
+	left: 18px; top: 10px;
+}
+
+#paddle-right:before {
+	left: 11px; top: 2px;
+	-webkit-transform-origin: 0% 50%;
+	-webkit-transform: rotate(90deg);
+	-khtml-transform-origin: 0% 50%;
+	-khtml-transform: rotate(90deg);
+	-moz-transform-origin: 0% 50%;
+	-moz-transform: rotate(90deg);
+	-ms-transform-origin: 0% 50%;
+	-ms-transform: rotate(90deg);
+	-o-transform-origin: 0% 50%;
+	-o-transform: rotate(90deg);
+	transform-origin: 0% 50%;
+	transform: rotate(90deg);
+}
+
+#paddle-left:before {
+	left: auto; top: 1px;
+	right: 12px;
+	-webkit-transform-origin: 100% 50%;
+	-webkit-transform: rotate(-90deg);
+	-khtml-transform-origin: 100% 50%;
+	-khtml-transform: rotate(-90deg);
+	-moz-transform-origin: 100% 50%;
+	-moz-transform: rotate(-90deg);
+	-ms-transform-origin: 100% 50%;
+	-ms-transform: rotate(-90deg);
+	-o-transform-origin: 100% 50%;
+	-o-transform: rotate(-90deg);
+	transform-origin: 100% 50%;
+	transform: rotate(-90deg);
+}
+
+#rankings {
+	position: absolute;
+	right: -125px; top: 100px;
+	background: orange;
+	border: 5px solid orange;
+	box-shadow: inset 0px 0px 0px 5px black;
+	padding: 15px;
+	font-family: 'Permanent Marker', cursive;
+	width: 400px;
+	font-size: 16px;
+}
+
+#rankings th {
+	font-size: 26px;
+	text-align: center;
+}
+
+#rankings em {
+	font-size: 10px;
+	line-height: 8px;
+}

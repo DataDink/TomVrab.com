@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Sniglet:800|Press+Start+2P|Squada+One|Orbitron|Permanent+Marker|Warnes);
+html {
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 1000px;
+	height: 687px;
+	margin: 0px auto;
+	padding: 0px 125px;
+	-webkit-transform: translateZ(0px); -khtml-transform: translateZ(0px); -moz-transform: translateZ(0px); -ms-transform: translateZ(0px); -o-transform: translateZ(0px); transform: translateZ(0px);
+}
+
+@-webkit-keyframes links {	0% { margin-bottom: 0px; -webkit-animation-timing-function: ease-out; }  2% { margin-bottom: -25px; -webkit-animation-timing-function: ease-in; } 4% { margin-bottom: 0px; -webkit-animation-timing-function: ease-out; } 6% { margin-bottom: -15px; -webkit-animation-timing-function: ease-in; } 8% { margin-bottom: 0px; -webkit-animation-timing-function: ease-out; } 10% { margin-bottom: -5px; -webkit-animation-timing-function: ease-in; } 11% { margin-bottom: 0px; }	100% { margin-bottom: 0px; }}
+@-khtml-keyframes links {	0% { margin-bottom: 0px; -khtml-animation-timing-function: ease-out; }  2% { margin-bottom: -25px; -khtml-animation-timing-function: ease-in; } 4% { margin-bottom: 0px; -khtml-animation-timing-function: ease-out; } 6% { margin-bottom: -15px; -khtml-animation-timing-function: ease-in; } 8% { margin-bottom: 0px; -khtml-animation-timing-function: ease-out; } 10% { margin-bottom: -5px; -khtml-animation-timing-function: ease-in; } 11% { margin-bottom: 0px; }	100% { margin-bottom: 0px; }}
+@-moz-keyframes links {	0% { margin-bottom: 0px; -moz-animation-timing-function: ease-out; }  2% { margin-bottom: -25px; -moz-animation-timing-function: ease-in; } 4% { margin-bottom: 0px; -moz-animation-timing-function: ease-out; } 6% { margin-bottom: -15px; -moz-animation-timing-function: ease-in; } 8% { margin-bottom: 0px; -moz-animation-timing-function: ease-out; } 10% { margin-bottom: -5px; -moz-animation-timing-function: ease-in; } 11% { margin-bottom: 0px; }	100% { margin-bottom: 0px; }}
+@-ms-keyframes links {	0% { margin-bottom: 0px; -ms-animation-timing-function: ease-out; }  2% { margin-bottom: -25px; -ms-animation-timing-function: ease-in; } 4% { margin-bottom: 0px; -ms-animation-timing-function: ease-out; } 6% { margin-bottom: -15px; -ms-animation-timing-function: ease-in; } 8% { margin-bottom: 0px; -ms-animation-timing-function: ease-out; } 10% { margin-bottom: -5px; -ms-animation-timing-function: ease-in; } 11% { margin-bottom: 0px; }	100% { margin-bottom: 0px; }}
+@-o-keyframes links {	0% { margin-bottom: 0px; -o-animation-timing-function: ease-out; }  2% { margin-bottom: -25px; -o-animation-timing-function: ease-in; } 4% { margin-bottom: 0px; -o-animation-timing-function: ease-out; } 6% { margin-bottom: -15px; -o-animation-timing-function: ease-in; } 8% { margin-bottom: 0px; -o-animation-timing-function: ease-out; } 10% { margin-bottom: -5px; -o-animation-timing-function: ease-in; } 11% { margin-bottom: 0px; }	100% { margin-bottom: 0px; }}
+@keyframes links {	0% { margin-bottom: 0px; animation-timing-function: ease-out; }  2% { margin-bottom: -25px; animation-timing-function: ease-in; } 4% { margin-bottom: 0px; animation-timing-function: ease-out; } 6% { margin-bottom: -15px; animation-timing-function: ease-in; } 8% { margin-bottom: 0px; animation-timing-function: ease-out; } 10% { margin-bottom: -5px; animation-timing-function: ease-in; } 11% { margin-bottom: 0px; }	100% { margin-bottom: 0px; }}
+
+footer {
+	position: absolute;
+	display: block;
+	left: 0px; right: 0px;
+	bottom: -75px;
+	height: 75px;
+	text-align: center;
+	-webkit-transform: translateZ(0px); -khtml-transform: translateZ(0px); -moz-transform: translateZ(0px); -ms-transform: translateZ(0px); -o-transform: translateZ(0px); transform: translateZ(0px);
+}
+
+footer > nav {
+	display: inline-block;
+}
+
+footer > nav > a {
+	display: inline-block;
+	vertical-align: bottom;
+	color: white;
+	font-size: 18px;
+	font-family: 'Sniglet', cursive; 
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 0px 1px #000000, -1px 0px 1px #000000;
+	-webkit-transition: .25s text-shadow ease;
+	-khtml-transition: .25s text-shadow ease;
+	-webkit-transition: .25s text-shadow ease;
+	-moz-transition: .25s text-shadow ease;
+	-ms-transition: .25s text-shadow ease;
+	-o-transition: .25s text-shadow ease;
+	transition: .25s text-shadow ease;
+}
+
+footer > nav > a:nth-child(3n+1):hover {
+	text-shadow: 1px 0px 1px #000000, -1px 0px 1px #000000, 0px 0px 15px #FFFF00;
+}
+
+footer > nav > a:nth-child(3n+2):hover {
+	text-shadow: 1px 0px 1px #000000, -1px 0px 1px #000000, 0px 0px 15px #FF00FF;
+}
+
+footer > nav > a:nth-child(3n+3):hover {
+	text-shadow: 1px 0px 1px #000000, -1px 0px 1px #000000, 0px 0px 15px #FFFFFF;
+}
+
+footer > nav > a:nth-child(9n+1) { -webkit-animation: links 10s infinite; -khtml-animation: links 10s infinite; -moz-animation: links 10s infinite; -ms-animation: links 10s infinite; -o-animation: links 10s infinite; animation: links 10s infinite; }
+footer > nav > a:nth-child(9n+2) { -webkit-animation: links 9s infinite; -khtml-animation: links 9s infinite; -moz-animation: links 9s infinite; -ms-animation: links 9s infinite; -o-animation: links 9s infinite; animation: links 9s infinite; }
+footer > nav > a:nth-child(9n+3) { -webkit-animation: links 11s infinite; -khtml-animation: links 11s infinite; -moz-animation: links 11s infinite; -ms-animation: links 11s infinite; -o-animation: links 11s infinite; animation: links 11s infinite; }
+footer > nav > a:nth-child(9n+4) { -webkit-animation: links 9.5s infinite; -khtml-animation: links 9.5s infinite; -moz-animation: links 9.5s infinite; -ms-animation: links 9.5s infinite; -o-animation: links 9.5s infinite; animation: links 9.5s infinite; }
+footer > nav > a:nth-child(9n+5) { -webkit-animation: links 10.5s infinite; -khtml-animation: links 10.5s infinite; -moz-animation: links 10.5s infinite; -ms-animation: links 10.5s infinite; -o-animation: links 10.5s infinite; animation: links 10.5s infinite; }
+footer > nav > a:nth-child(9n+6) { -webkit-animation: links 8s infinite; -khtml-animation: links 8s infinite; -moz-animation: links 8s infinite; -ms-animation: links 8s infinite; -o-animation: links 8s infinite; animation: links 8s infinite; }
+footer > nav > a:nth-child(9n+7) { -webkit-animation: links 12s infinite; -khtml-animation: links 12s infinite; -moz-animation: links 12s infinite; -ms-animation: links 12s infinite; -o-animation: links 12s infinite; animation: links 12s infinite; }
+footer > nav > a:nth-child(9n+8) { -webkit-animation: links 8.5s infinite; -khtml-animation: links 8.5s infinite; -moz-animation: links 8.5s infinite; -ms-animation: links 8.5s infinite; -o-animation: links 8.5s infinite; animation: links 8.5s infinite; }
+footer > nav > a:nth-child(9n+9) { -webkit-animation: links 11.5s infinite; -khtml-animation: links 11.5s infinite; -moz-animation: links 11.5s infinite; -ms-animation: links 11.5s infinite; -o-animation: links 11.5s infinite; animation: links 11.5s infinite; }
+
+.mute { 
+	display: block; 
+	height: 50px; width: 30px;
+	background: url('../images/audio-mute.png') no-repeat 0px -53px;
+	position: absolute;
+	bottom: -4px; right: 0px;
+	cursor: pointer;
+}
+
+.mute.muted {
+	background-position: 0px 0px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- This is a single-file portable game. The only external references are to media files such as images and sounds. -->
+<!-- All external references are configurable to allow manipulation -->
+<!-- Only base game code and styles are compressed to decrease file size. -->
+<!-- The project uncompressed source will be available at https://github.com/datadink -->
+<html>
+	<head>
+		<style type="text/css">
+			#game-container { bottom:0; cursor:none; height:230px; left:0; margin:auto; overflow:hidden; padding:0; position:absolute; right:0; top:0; width:330px; }  #game-container > * { display:none; margin:0; padding:0; position:absolute; }  #ball { background:blue; height:50px; width:50px; }  #paddle-left,#paddle-right { height:25%; width:25px; }  #paddle-top,#paddle-bottom { height:25px; width:25%; }  .computer { background:red; }  .player { background:green; }  #load-screen { display:block; height:100%; width:100%; }  #load-screen * { bottom:0; display:block; height:25px; left:0; margin:auto; position:absolute; right:0; text-align:center; top:0; }  #start-screen { cursor:pointer; height:100%; width:100%; }  #logo { bottom:0; height:100px; margin:auto; position:absolute; text-align:center; top:0; width:100%; }  #start-button { bottom:100px; height:25px; left:0; margin:auto; position:absolute; right:0; text-align:center; width:100px; }  #round-screen { display:block; height:100%; position:absolute; width:100%; }  #round-screen * { bottom:0; display:block; font-size:150px; height:150px; left:0; margin:auto; padding:0; position:absolute; right:0; text-align:center; top:0; width:150px; }  #computer-ui { left:35px; position:absolute; top:35px; }  #player-ui { bottom:35px; position:absolute; right:35px; }  #computer-ui *,#player-ui * { display:inline-block; }
+		</style>
+		<link href="styles/site.css" type="text/css" rel="stylesheet" />
+		<link href="styles/sexy-pong.css" type="text/css" rel="stylesheet" />
+		<script src="scripts/jquery.js" type="text/javascript"></script>
+		<script src="scripts/interaction-lib.js" type="text/javascript"></script>
+	</head>
+	<body>
+	
+		<div id="background"></div>
+		
+		<div id="cabinet"></div>
+
+		<div class="cloud-man"></div>
+		
+		<div id="rankings">
+			<table>
+				<tbody>
+					<tr>
+						<th colspan="3">Sexy Pong</th>
+					</tr>
+					<tr><td>1 Point2</td><td>................</td><td>LoNeLy</td></tr>
+					<tr><td>2 Points</td><td>................</td><td>A LiTtLe SaUcEy</td></tr>
+					<tr><td>4 Points</td><td>................</td><td>SwAnK</td></tr>
+					<tr><td>6 Points</td><td>................</td><td>HeArT BrEaKeR</td></tr>
+					<tr><td>8 Points</td><td>................</td><td>ChOcoLaTe Luv</td></tr>
+					<tr><td>10 Points</td><td>................</td><td>SeXeH!!!</td></tr>
+					<tr>
+						<th colspan="3">*Prizes</th>
+					</tr>
+					<tr><td>11 Points</td><td>................</td><td>Make Tom a sandwich!</td></tr>
+					<tr><td>12 Points</td><td>................</td><td>Go directly to jail!</td></tr>
+					<tr><td>13 Points</td><td>................</td><td>Feel sexually assaulted!</td></tr>
+					<tr><td>14 Points</td><td>................</td><td>Pillow fight?</td></tr>
+					<tr><td>15 Points</td><td>................</td><td>Star in your own pohrknough!</td></tr>
+				</tbody>
+			</table>
+			<em>
+				* All prizes are won by random drawing. No purchase necessary. Must submit a screenshot (which could never be faked) to enter prize drawings. Drawings will not be regular, fair, or legitimate in any way shape or form. Odds may range from 0:1 to 100:0. Prizes are only available in countries and states and cities and clubs where the prizes are, in fact, legal, not against any rules, and all that kind of stuff. Must be 21 or older or younger to play. I'm naked.
+			</em>
+		</div>
+		
+		<div id="game-container">
+			
+			<div id="computer-ui">Cloud Guy's Score: <div id="computer-score">0</div></div>
+			<div id="player-ui">Your Score: <div id="player-score">0</div></div>
+			
+			<div id="ball"></div>
+			<div id="paddle-left" class="computer"></div>
+			<div id="paddle-right" class="player"></div>
+			<div id="paddle-top" class="computer"></div>
+			<div id="paddle-bottom" class="player"></div>
+			
+			<div id="round-screen"><h1 class="hidden" style="display: none;">3</h1><h1 class="hidden" style="display: none;">2</h1><h1 class="hidden" style="display: none;">1</h1></div>
+			<div id="point-screen"><h1 class="hidden"></h1></div>
+			<div id="start-screen"><h1 id="logo">Sexy Pong</h1><div id="start-button">-start game-</div></div>
+			<div id="load-screen"><h1>Loading...</h1></div>
+		
+			<div id="sounds">
+				<div id="computer-point-sounds">
+					<audio src="media/game-sounds/Applause1.mp3"></audio>
+					<audio src="media/game-sounds/Applause2.mp3"></audio>
+					<audio src="media/game-sounds/Applause3.mp3"></audio>
+					<audio src="media/game-sounds/Applause4.mp3"></audio>
+					<audio src="media/game-sounds/Applause5.mp3"></audio>
+				</div>
+				<div id="player-point-sounds">
+					<audio src="media/game-sounds/Applause1.mp3"></audio>
+					<audio src="media/game-sounds/Applause2.mp3"></audio>
+					<audio src="media/game-sounds/Applause3.mp3"></audio>
+					<audio src="media/game-sounds/Applause4.mp3"></audio>
+					<audio src="media/game-sounds/Applause5.mp3"></audio>
+				</div>
+				<div id="computer-hit-sounds">
+					<audio src="media/game-sounds/hit1.mp3"></audio>
+					<audio src="media/game-sounds/hit2.mp3"></audio>
+					<audio src="media/game-sounds/hit3.mp3"></audio>
+					<audio src="media/game-sounds/hit4.mp3"></audio>
+					<audio src="media/game-sounds/hit5.mp3"></audio>
+					<audio src="media/game-sounds/hit6.mp3"></audio>
+					<audio src="media/game-sounds/hit7.mp3"></audio>
+					<audio src="media/game-sounds/hit8.mp3"></audio>
+					<audio src="media/game-sounds/hit9.mp3"></audio>
+					<audio src="media/game-sounds/hit10.mp3"></audio>
+					<audio src="media/game-sounds/hit11.mp3"></audio>
+					<audio src="media/game-sounds/hit12.mp3"></audio>
+					<audio src="media/game-sounds/hit13.mp3"></audio>
+					<audio src="media/game-sounds/hit14.mp3"></audio>
+					<audio src="media/game-sounds/hit15.mp3"></audio>
+					<audio src="media/game-sounds/hit16.mp3"></audio>
+					<audio src="media/game-sounds/hit17.mp3"></audio>
+					<audio src="media/game-sounds/hit18.mp3"></audio>
+					<audio src="media/game-sounds/hit19.mp3"></audio>
+				</div>
+				<div id="player-hit-sounds">
+					<audio src="media/game-sounds/hit1.mp3"></audio>
+					<audio src="media/game-sounds/hit2.mp3"></audio>
+					<audio src="media/game-sounds/hit3.mp3"></audio>
+					<audio src="media/game-sounds/hit4.mp3"></audio>
+					<audio src="media/game-sounds/hit5.mp3"></audio>
+					<audio src="media/game-sounds/hit6.mp3"></audio>
+					<audio src="media/game-sounds/hit7.mp3"></audio>
+					<audio src="media/game-sounds/hit8.mp3"></audio>
+					<audio src="media/game-sounds/hit9.mp3"></audio>
+					<audio src="media/game-sounds/hit10.mp3"></audio>
+					<audio src="media/game-sounds/hit11.mp3"></audio>
+					<audio src="media/game-sounds/hit12.mp3"></audio>
+					<audio src="media/game-sounds/hit13.mp3"></audio>
+					<audio src="media/game-sounds/hit14.mp3"></audio>
+					<audio src="media/game-sounds/hit15.mp3"></audio>
+					<audio src="media/game-sounds/hit16.mp3"></audio>
+					<audio src="media/game-sounds/hit17.mp3"></audio>
+					<audio src="media/game-sounds/hit18.mp3"></audio>
+					<audio src="media/game-sounds/hit19.mp3"></audio>
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer data-interaction="interaction" data-ajaxform-action="footer.html" data-ajaxform-target="footer" data-ajaxform-method="GET"></footer>
+		<audio src="media/game-sounds/bwhite.mp3" autoplay="autoplay" loop="loop"></audio>
+		
+		<script type="text/javascript">
+			(function() { // scope
+				// settings
+				var gutterSize = 30;
+				var gameSpeed = .006; 
+				var speedPerLevel = .002; 
+				var computerHandicap = .55;
+				
+				// Compressed - please visit https://github.com/datadink for source
+				function N(){t.style.display="none";M(l);M(c);M(h);M(p);A(s);A(o);e.addEventListener("mousemove",H);k()}function k(){clearInterval(T);for(var e=0;e<v.length;e++){var t=v[e];var n=P(t);if(z(t)){t.style.left=D().width/2-n.width/2+"px"}else{t.style.top=D().height/2-n.height/2+"px"}}L(function(){_();T=setInterval(function(){F();for(var e=0;e<v.length;e++){j(v[e])}if(V()){O();k()}},10)})}function L(e){var t=1e3;var n=[];for(var r=0;r<i.childNodes.length;r++){n.push(i.childNodes[r]);setTimeout(function(){var e=n.shift();e.style.display="";e.className="";setTimeout(function(){e.className="hidden";e.style.display="none"},1e3)},t);t+=1e3}setTimeout(e,t)}function A(e){e.style.display="block"}function O(){u.innerHTML="";u.appendChild(document.createTextNode(w));a.innerHTML="";a.appendChild(document.createTextNode(E))}function M(e){if(!e){return}e.style.display="block";e.gameData={wall:e.id.substr("paddle-".length).toLowerCase(),controller:(" "+e.className+" ").toLowerCase().indexOf(" player ")>=0?"player":"computer"};var t=P(e);if(e.gameData.wall==="left"){e.style.right="auto";e.style.bottom="auto";e.style.left=gutterSize-t.width+"px"}else if(e.gameData.wall==="right"){e.style.left="auto";e.style.bottom="auto";e.style.right=gutterSize-t.width+"px"}else if(e.gameData.wall==="top"){e.style.bottom="auto";e.style.right="auto";e.style.top=gutterSize-t.height+"px"}else if(e.gameData.wall==="bottom"){e.style.top="auto";e.style.right="auto";e.style.bottom=gutterSize-t.height+"px"}if(e.gameData.controller==="player"){d.push(e)}if(e.gameData.controller==="computer"){v.push(e)}}function _(){f.style.display="block";S.d=Math.random()*360;S.x=.5;S.y=.5;I()}function D(){var t=e.getBoundingClientRect();var n={left:t.left,top:t.top,right:t.right,bottom:t.bottom,width:e.offsetWidth,height:e.offsetHeight};return n}function P(t){var n=e.getBoundingClientRect();var r=t.getBoundingClientRect();var i={left:r.left-n.left,top:r.top-n.top,right:n.right-r.right,bottom:n.bottom-r.bottom,width:t.offsetWidth,height:t.offsetHeight};return i}function H(e){var t=D();x.x=Math.round(e.clientX)-t.left;x.y=Math.round(e.clientY)-t.top;for(var n=0;n<d.length;n++){B(d[n])}}function B(e){var t=P(e);if(!z(e)){e.style.top=x.y-t.height/2+"px"}else{e.style.left=x.x-t.width/2+"px"}}function j(e){var t=z(e);var n=P(f);var r=t?n.left+n.width/2:n.top+n.height/2;var i=P(e);var s=t?i.left:i.top;var o=t?i.left+i.width:i.top+i.height;var u=r>o;var a=r<s;var l=u?r-o:a?s-r:0;if(l===0){return}var c=U();var h=Math.min(t?c.x:c.y,l);if(a&&t){e.style.left=Math.round(i.left-h)+"px"}else if(a&&!t){e.style.top=Math.round(i.top-h)+"px"}else if(u&&t){e.style.left=Math.round(i.left+h)+"px"}else if(u&&!t){e.style.top=Math.round(i.top+h)+"px"}}function F(){var e=P(f);var t=R();var n=W(S.d);S.x+=n.x*t;S.y+=n.y*t;I()}function I(){var e=P(f);var t=D();var n=t.width*S.x-e.width/2;var r=t.height*S.y-e.height/2;f.style.left=Math.round(n)+"px";f.style.top=Math.round(r)+"px"}function q(){return Math.max(1,E)}function R(){return q()*speedPerLevel+gameSpeed}function U(){var e=D();var t=R()*computerHandicap;return{x:Math.max(1,Math.round(t*e.width)),y:Math.max(1,Math.round(t*e.height))}}function z(e){return e.gameData.wall==="top"||e.gameData.wall==="bottom"}function W(e){var t=e/180*Math.PI;return{x:Math.cos(t),y:Math.sin(t)}}function X(e){return Math.atan2(e.y,e.x)*180/Math.PI}function V(){var e=P(f);var t=[l,c,h,p];if(e.left<=0){return $(l)}if(e.top<=0){return $(h)}if(e.right<=0){return $(c)}if(e.bottom<=0){return $(p)}for(var n=0;n<t.length;n++){var r=t[n];if(!r){continue}var i=P(r);var s=e.left<i.left+i.width&&e.left+e.width>i.left;var o=e.top<i.top+i.height&&e.top+e.height>i.top;if(s&&o){J(r);return false}}}function $(e){if(e){if(e.gameData.controller==="player"){w++}else{E++}K(e);return true}var t=W(S.d);if(!z(e)){S.d=X({x:-t.x,y:t.y})}else{S.d=X({x:t.x,y:-t.y})}}function J(e){var t=P(e);var n={x:t.left+t.width/2,y:t.top+t.height/2};var r=P(f);var i={x:r.left+r.width/2,y:r.top+r.height/2};var s=X({x:n.x-i.x,y:n.y-i.y});S.d=s+180;Q(e)}function K(e){var t=e.gameData.controller==="player"?g:m;G(t)}function Q(e){var t=e.gameData.controller==="player"?b:y;G(t)}function G(e){if(!e||e.childNodes.length===0){return}var t=[];for(var n=0;n<e.childNodes.length;n++){if(e.childNodes[n].tagName&&e.childNodes[n].tagName.toLowerCase()==="audio"){t.push(e.childNodes[n])}}if(t.length===0){return}var r=Math.round(Math.random()*(t.length-1));var i=t[r];i.play()}var e=document.getElementById("game-container");var t=document.getElementById("start-screen");var n=document.getElementById("load-screen");var r=document.getElementById("start-button");var i=document.getElementById("round-screen");var s=document.getElementById("computer-ui");var o=document.getElementById("player-ui");var u=document.getElementById("computer-score");var a=document.getElementById("player-score");var f=document.getElementById("ball");var l=document.getElementById("paddle-left");var c=document.getElementById("paddle-right");var h=document.getElementById("paddle-top");var p=document.getElementById("paddle-bottom");var d=[];var v=[];var m=document.getElementById("computer-point-sounds");var g=document.getElementById("player-point-sounds");var y=document.getElementById("computer-hit-sounds");var b=document.getElementById("player-hit-sounds");var w=0;var E=0;var S={x:.5,y:.5,d:0};var x={x:0,y:0};var T;setTimeout(function(){t.style.display="block";n.style.display="none";r.addEventListener("click",N)},1e3);var C=0;
+			})();
+		
+		</script>
+	</body>
+</html>

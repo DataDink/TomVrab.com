@@ -1,0 +1,115 @@
+body {
+	background: black;
+}
+
+footer > nav > a { 
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+}
+
+@-webkit-keyframes title-fade { 0% { -webkit-transform: scale(1,1); opacity: 1; } 5% { opacity: 1; } 10% { opacity: 0; } 80% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }
+@-khtml-keyframes title-fade { 0% { opacity: 1; } 5% { opacity: 1; } 10% { opacity: 0; } 80% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }
+@-moz-keyframes title-fade { 0% { opacity: 1; } 5% { opacity: 1; } 10% { opacity: 0; } 80% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }
+@-ms-keyframes title-fade { 0% { opacity: 1; } 5% { opacity: 1; } 10% { opacity: 0; } 80% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }
+@-o-keyframes title-fade { 0% { opacity: 1; } 5% { opacity: 1; } 10% { opacity: 0; } 80% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes title-fade { 0% { opacity: 1; } 5% { opacity: 1; } 10% { opacity: 0; } 80% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }
+
+header {
+	font-family: 'Squada One', cursive;
+	color: #047CBC;
+	text-shadow: 1px 0px 0px #7CFCFC, -1px 0px 0px #7CFCFC, 0px 1px 0px #7CFCFC, 0px -1px 0px #7CFCFC, 
+				 0px 5px 0px #043C7C, 0px 10px 0px #043C7C, 0px 15px 0px #043C7C, 0px 20px 0px #043C7C;
+	font-size: 220px;
+	width: 900px;
+	padding: 100px 0px 0px 0px;
+	text-align: center;
+	margin: 0px auto 25px;
+	opacity: 0;
+	-webkit-animation: title-fade 60s linear infinite; -khtml-animation: title-fade 60s linear infinite; -moz-animation: title-fade 60s linear infinite; -ms-animation: title-fade 60s linear infinite; -o-animation: title-fade 60s linear infinite; animation: title-fade 60s linear infinite;
+}
+
+header > small {
+	font-size: 20px;
+	text-shadow: none;
+	vertical-align: top;
+	padding: 45px 0px 0px 0px;
+	display: inline-block;
+	margin: 0px -15px 0px 0px;
+	color: #7CFCFC;
+}
+
+#press-start {
+	font-family: 'Press Start 2P', cursive;
+	width: 350px;
+	margin: 0px auto;
+	color: #7CFCFC;
+	font-size: 20px;
+	line-height: 32px;
+	text-align: center;
+	padding: 25px 0px 0px 0px;
+	text-shadow: none;
+}
+
+/* TODO: Remove Scale(1, 1) when CHROME fixes a bug with fading opacity to 0 from 1 */
+@-webkit-keyframes bio-fade { 0% { -webkit-transform: scale(1,1); opacity: 0; } 5% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+@-khtml-keyframes bio-fade { 0% { opacity: 0; } 5% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+@-moz-keyframes bio-fade { 0% { opacity: 0; } 5% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+@-ms-keyframes bio-fade { 0% { opacity: 0; } 5% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+@-o-keyframes bio-fade { 0% { opacity: 0; } 5% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes bio-fade { 0% { opacity: 0; } 5% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+
+#bio-text {
+	-webkit-animation: bio-fade 60s linear infinite; -khtml-animation: bio-fade 60s linear infinite; -moz-animation: bio-fade 60s linear infinite; -ms-animation: bio-fade 60s linear infinite; -o-animation: bio-fade 60s linear infinite; animation: bio-fade 60s linear infinite;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 16px;
+	line-height: 32px;
+	color: #A7E7FF;
+	margin: -350px auto;
+	padding: 0px 25px;
+	opacity: 1;
+}
+
+#stars {
+	background: url('../images/metroid-stars.png') 50% 50%, url('../images/metroid-stars.png') 0% 0%;
+	background-size: 700px, 500px;
+	position: absolute;
+	height: 100%;
+	margin: 0px -300px;
+	top: 0px; left: 0px; right: 0px;
+}
+
+@-webkit-keyframes metroid-tom-bounce { 0% { top: 75px; } 50% { top: 250px; } 100% { top: 75px; } }
+@-khtml-keyframes metroid-tom-bounce { 0% { top: 75px; } 50% { top: 250px; } 100% { top: 75px; } }
+@-moz-keyframes metroid-tom-bounce { 0% { top: 75px; } 50% { top: 250px; } 100% { top: 75px; } }
+@-ms-keyframes metroid-tom-bounce { 0% { top: 75px; } 50% { top: 250px; } 100% { top: 75px; } }
+@-o-keyframes metroid-tom-bounce { 0% { top: 75px; } 50% { top: 250px; } 100% { top: 75px; } }
+@keyframes metroid-tom-bounce { 0% { top: 75px; } 50% { top: 250px; } 100% { top: 75px; } }
+
+@-webkit-keyframes metroid-tom-struggle { 0% { -webkit-transform: rotate(-22deg); } 50% { -webkit-transform: rotate(22deg); } 100% { -webkit-transform: rotate(-22deg); } }
+@-khtml-keyframes metroid-tom-struggle { 0% { -khtml-transform: rotate(-22deg); } 50% { -khtml-transform: rotate(22deg); } 100% { -khtml-transform: rotate(-22deg); } }
+@-moz-keyframes metroid-tom-struggle { 0% { -moz-transform: rotate(-22deg); } 50% { -moz-transform: rotate(22deg); } 100% { -moz-transform: rotate(-22deg); } }
+@-ms-keyframes metroid-tom-struggle { 0% { -ms-transform: rotate(-22deg); } 50% { -ms-transform: rotate(22deg); } 100% { -ms-transform: rotate(-22deg); } }
+@-o-keyframes metroid-tom-struggle { 0% { -o-transform: rotate(-22deg); } 50% { -o-transform: rotate(22deg); } 100% { -o-transform: rotate(-22deg); } }
+@keyframes metroid-tom-struggle { 0% { transform: rotate(-22deg); } 50% { transform: rotate(22deg); } 100% { transform: rotate(-22deg); } }
+
+#metroid-tom {
+	background: url('../images/metroid-tom.png');
+	width: 202px; height: 289px;
+	-webkit-transform-origin: 180px 35px; -khtml-transform-origin: 180px 35px; -moz-transform-origin: 180px 35px; -ms-transform-origin: 180px 35px; -o-transform-origin: 180px 35px; transform-origin: 180px 35px;
+	position: absolute;
+	right: -75px; top: 150px;
+	-webkit-animation: metroid-tom-bounce 10s ease infinite, metroid-tom-struggle 4s ease infinite;
+	-khtml-animation: metroid-tom-bounce 10s ease infinite, metroid-tom-struggle 4s ease infinite;
+	-moz-animation: metroid-tom-bounce 10s ease infinite, metroid-tom-struggle 4s ease infinite;
+	-ms-animation: metroid-tom-bounce 10s ease infinite, metroid-tom-struggle 4s ease infinite;
+	-o-animation: metroid-tom-bounce 10s ease infinite, metroid-tom-struggle 4s ease infinite;
+	animation: metroid-tom-bounce 10s ease infinite, metroid-tom-struggle 4s ease infinite;
+}
+
+#ground {
+	background: url('../images/metroid-ground.jpg') repeat-x 50% 100%;
+	position: absolute;
+	height: 100px;
+	margin: 0px -300px;
+	bottom: 0px; left: 0px; right: 0px;
+}
